@@ -18,6 +18,7 @@ namespace AppVanguarda
         public MainPage()
         {
             InitializeComponent();
+            this.BindingContext = new MainViewModel();
         }
 
         protected override async void OnAppearing()

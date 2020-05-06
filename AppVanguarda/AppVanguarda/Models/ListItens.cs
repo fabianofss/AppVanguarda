@@ -4,10 +4,14 @@ using System.Text;
 
 namespace AppVanguarda.Models
 {
-    public class ListItens
+    public class ItemRom
     {
         public int type { get; set; }
         public string name { get; set; }
+        public string UrlImagem { get; set; }
     }
 }
+
+
+
 

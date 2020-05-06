@@ -4,13 +4,54 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Title="{Binding Titulo}"
              x:Class="AppVanguarda.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ListView HasUnevenRows="true"
+              IsRefreshing = "{Binding Ocupado}"
+              ItemsSource="{Binding Itens}"
+              >
+
+        <ListView.ItemTemplate>
+
+            <DataTemplate>
+
+                <ViewCell>
+
+                    <Grid Padding="20,30" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*" />
+
+                        </Grid.ColumnDefinitions>
+                        
+                        <Image HeightRequest="90" 
+                               WidthRequest = "90"
+                               Source="{Binding UrlImagem}"
+                               Grid.Row="0"
+                               Grid.Column="0"
+                               Grid.RowSpan ="2"
+                               />
+                        
+                        <Label Grid.Row="0" 
+                               Grid.Column="1"
+                               Text="{Binding name}"
+                               FontSize="Large"
+                               TextColor="#FF5525"/>
+
+                    </Grid>
+
+                </ViewCell>
+
+            </DataTemplate>
+
+        </ListView.ItemTemplate>
+
+
+    </ListView>
 
 </ContentPage>
