@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -7,51 +7,11 @@
              Title="{Binding Titulo}"
              x:Class="AppVanguarda.MainPage">
 
-    <ListView HasUnevenRows="true"
-              IsRefreshing = "{Binding Ocupado}"
-              ItemsSource="{Binding Itens}"
-              >
+    <StackLayout Padding="0,30,0,0">
+        <Button  Image="angeling.png"
+                 Text="Ver itens"
+                 BorderWidth="1" BorderColor="Red" Margin="40,0,40,0" ContentLayout="Top, 10"/>
 
-        <ListView.ItemTemplate>
-
-            <DataTemplate>
-
-                <ViewCell>
-
-                    <Grid Padding="20,30" >
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*" />
-
-                        </Grid.ColumnDefinitions>
-                        
-                        <Image HeightRequest="90" 
-                               WidthRequest = "90"
-                               Source="{Binding UrlImagem}"
-                               Grid.Row="0"
-                               Grid.Column="0"
-                               Grid.RowSpan ="2"
-                               />
-                        
-                        <Label Grid.Row="0" 
-                               Grid.Column="1"
-                               Text="{Binding name}"
-                               FontSize="Large"
-                               TextColor="#FF5525"/>
-
-                    </Grid>
-
-                </ViewCell>
-
-            </DataTemplate>
-
-        </ListView.ItemTemplate>
-
-
-    </ListView>
+    </StackLayout>
 
 </ContentPage>

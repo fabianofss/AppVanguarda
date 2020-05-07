@@ -132,4 +132,7 @@
       <Name>AppVanguarda</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\angeling.png" />
+  </ItemGroup>
 </Project>
