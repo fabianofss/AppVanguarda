@@ -27,5 +27,10 @@ namespace AppVanguarda
             await ViewModel.LoadAsync();
 
         }
+
+        async void BtnItens_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ListaItensPage());
+        }
     }
 }

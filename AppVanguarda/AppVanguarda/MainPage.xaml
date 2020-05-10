@@ -10,7 +10,8 @@
     <StackLayout Padding="0,30,0,0">
         <Button  Image="angeling.png"
                  Text="Ver itens"
-                 BorderWidth="1" BorderColor="Red" Margin="40,0,40,0" ContentLayout="Top, 10"/>
+                 BorderWidth="1" BorderColor="Red" Margin="40,0,40,0" ContentLayout="Top, 10"
+                 Clicked="BtnItens_Clicked" />
 
     </StackLayout>
 
